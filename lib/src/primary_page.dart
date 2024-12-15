@@ -199,7 +199,7 @@ class _PrimaryPageState extends State<PrimaryPage> {
                             dateTime.isAfter(value.start) ||
                         (secondary || primary);
                     var inRangeTextColor = colorScheme.onPrimary;
-                    var outOfRangeTextColor = colorScheme.onBackground;
+                    var outOfRangeTextColor = colorScheme.onSurface;
                     return Column(
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -214,7 +214,8 @@ class _PrimaryPageState extends State<PrimaryPage> {
                               DateFormat(DateFormat.ABBR_WEEKDAY)
                                   .format(dateTime),
                               style: TextStyle(
-                                  fontSize: theme.textTheme.bodyMedium!.fontSize!,
+                                  fontSize:
+                                      theme.textTheme.bodyMedium!.fontSize!,
                                   color: outOfRangeTextColor),
                             ),
                           ),
